@@ -107,9 +107,59 @@
 // Map.clear() //removes everything from the map
 // Map.size() // used to return the current element count
 
-let map = new Map();
-map.set('1', 'str1')
-map.set(1, 'num1')
-map.set(true, 'bool1')
-alert(map.get(1))
-alert(map.get('1'))
+// let map = new Map();
+// map.set('1', 'str1')
+// map.set(1, 'num1')
+// map.set(true, 'bool1')
+// alert(map.get(1))
+// alert(map.get('1'))
+
+// let john = {name: 'john'};
+// let ben = {name: 'ben'};
+
+// let visitCountObj = {};
+// visitCountObj[ben] = 234;
+// visitCountObj[john]= 123;
+
+// alert(visitCountObj["[object Object]"]);
+
+// using set method in maps
+// let map = new Map();
+// map.set('1', 'str1')
+// .set(1, 'num1')
+// .set(true, 'bool1')
+
+// alert(map.get(1))
+// alert(map.get('1'))
+
+// looping over a map
+// there are 3 methods to loop over a map, first one is- map.key- returns iterable for keys
+// map.value- returns iterable for value, map.entries- return iterables for enteries(key value pair)
+
+let recipeMap = new Map([
+    ['cucumber', 500], 
+    ['tomoatoes',350],
+    ['onions', 100]
+]);
+
+// for(let vegetable of recipeMap.keys()){
+//     alert(vegetable);
+// } // this will output the keys of the map (cucumber, tomatoes, onions)
+
+// for(let amount of recipeMap.values()){
+//     alert(amount);
+// } // this will alert the values
+
+// for(let entry of recipeMap.entries()){
+//     alert(entry);
+// } // this will alert key and value pair
+
+// other method 
+
+// recipeMap.forEach((value,key,map)=>{
+//     alert(`${key} : ${value}`)
+// })
+
+// using the map get method
+
+alert(recipeMap.get('cucumber'))
