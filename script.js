@@ -97,3 +97,19 @@
 // }
 
 // MAP AND SETS
+// MAP- this is a collection of key data items, just like an object but maps allow key data of any types
+// MAP Properties
+// new Map() // to create map
+// Map.set(key, value) // this stores the value by the key
+// Map.get(key) //returns the value by the key, will return undefine if key does not exist in the map
+// Map.has(key) // this returns true if the key exist, else false
+// Map.delete(key) // it removes the element that is the key value pair, using the key specified in the param
+// Map.clear() //removes everything from the map
+// Map.size() // used to return the current element count
+
+let map = new Map();
+map.set('1', 'str1')
+map.set(1, 'num1')
+map.set(true, 'bool1')
+alert(map.get(1))
+alert(map.get('1'))
