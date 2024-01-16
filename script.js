@@ -59,13 +59,41 @@
 //     alert(char)
 // }
 
-let str = "hello";
-let iterator = str[Symbol.iterator]();
+// let str = "hello";
+// let iterator = str[Symbol.iterator]();
 
-while(true){
-    let result = iterator.next();
-    if(result.done) break;
-    alert(result.value)
-}
+// while(true){
+//     let result = iterator.next();
+//     if(result.done) break;
+//     alert(result.value)
+// }
 
 // iterables are objects that implement the symbol.iterator method
+// array likes, these are objects that have indexes and length but they look like arrays
+
+
+// let range = {
+//     from: 1,
+//     to: 10
+// };
+
+// range[Symbol.iterator] = function(){
+//     return{
+//         current: this.from,
+//         last: this.to,
+
+//         next(){
+//             if(this.current<=this.last){
+//                 return{done: false, value: this.current++}
+//             } else{
+//                 return {done: true}
+//             }
+//         }
+//     };
+// };
+
+// for(let num of range){
+//     alert(num)
+// }
+
+// MAP AND SETS
