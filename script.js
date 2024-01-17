@@ -136,11 +136,11 @@
 // there are 3 methods to loop over a map, first one is- map.key- returns iterable for keys
 // map.value- returns iterable for value, map.entries- return iterables for enteries(key value pair)
 
-let recipeMap = new Map([
-    ['cucumber', 500], 
-    ['tomoatoes',350],
-    ['onions', 100]
-]);
+// let recipeMap = new Map([
+//     ['cucumber', 500], 
+//     ['tomoatoes',350],
+//     ['onions', 100]
+// ]);
 
 // for(let vegetable of recipeMap.keys()){
 //     alert(vegetable);
@@ -162,4 +162,41 @@ let recipeMap = new Map([
 
 // using the map get method
 
-alert(recipeMap.get('cucumber'))
+// alert(recipeMap.get('cucumber'))
+
+// Write a function that takes an array of numbers and returns the sum of all the elements.
+// const numbers = [20, 20, 20, 20, 20]
+// const result = numbers.reduce((accumulator, currentValue)=> accumulator + currentValue, 0);
+// alert(result)
+
+// Given an array of numbers, create a new array containing only the even numbers.
+// const number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const evenNumber = number.filter(number => number % 2 === 0);
+// alert(evenNumber)
+
+// OBJECT.from entries- object from map
+// this method will create an object from an array of key value pair
+// let prices = Object.fromEntries([
+//     ['banana', 1],
+//     ['orange', 2],
+//     ['meat', 4]
+// ]);
+
+// alert(prices.orange) // this will get a plain object from map
+// Using Map method
+
+// let map = new Map();
+// map.set('banana', 1)
+// map.set('orange', 2)
+// map.set('meat', 4)
+
+// let obj = Object.fromEntries(map.entries(map))
+// alert(obj.orange)
+
+// SETS
+new Set([iterable])
+Set.add(value)
+Set.delete(value)
+Set.has(value)
+Set.clear()
+Set.size
