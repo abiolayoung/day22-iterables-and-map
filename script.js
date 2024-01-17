@@ -194,9 +194,36 @@
 // alert(obj.orange)
 
 // SETS
-new Set([iterable])
-Set.add(value)
-Set.delete(value)
-Set.has(value)
-Set.clear()
-Set.size
+// new Set([iterable])
+// Set.add(value)
+// Set.delete(value)
+// Set.has(value)
+// Set.clear()
+// Set.size
+
+// let set = new Set();
+// let john = {name: 'john'};
+// let peter = {name: 'peter'};
+// let mary = {name: 'mary'};
+
+// set.add(john);
+// set.add(peter);
+// set.add(mary);
+// set.add(john);
+// set.add(mary);
+
+// // alert(set.size)
+
+// for(let user of set){
+//     alert(user.name)
+// }
+
+// set doesnt allow duplicates unless the entire nsme is changed
+let set = new Set(["oranges", 'apples', 'plum']);
+// for(let value of set){ // using for off loop to loop over the array
+//     alert(value)
+// }
+
+set.forEach((value, valueAgain, set) => {
+    alert(value)
+}) /// using for each loop
