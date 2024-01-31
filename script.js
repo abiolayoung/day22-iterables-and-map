@@ -219,11 +219,84 @@
 // }
 
 // set doesnt allow duplicates unless the entire nsme is changed
-let set = new Set(["oranges", 'apples', 'plum']);
+// let set = new Set(["oranges", 'apples', 'plum']);
 // for(let value of set){ // using for off loop to loop over the array
 //     alert(value)
 // }
 
-set.forEach((value, valueAgain, set) => {
-    alert(value)
-}) /// using for each loop
+// set.forEach((value, valueAgain, set) => {
+//     alert(value)
+// }) /// using for each loop
+
+// WEAKMAP
+//  let weakMap = new weakMap()
+//  let obj = {};
+//  weakMap.set(obj, 'ok');
+
+// let john = {name: 'john'}
+// let weakMap = new weakMap();
+// weakMap.set(john, '...')
+
+// weakmap does not support iteration and key founction value
+// we put data to the weakmap using object as the key
+
+// VisitCount.js
+// let visitCountMap = new WeakMap();
+
+// function countUser(user){
+//     let count = visitCountMap.get(user) || 0;
+//     visitCountMap.set(user, count+1)
+// }
+
+// main.js
+// let john = {name: 'john'}
+// countUser(john)
+// john = null
+
+// weakset behave similarly to weakmap, we may only add objects to weakset, we cannot use primitves
+// it support the add, has, delete  function but doesnt support the size and has not iterator has the weakmap
+// membership in weakset may mean something about the object
+
+// let visitedSet = new WeakSet()
+// let john = {name: 'john'};
+// let peter = {name: 'peter'};
+// let mary = {name: 'mary'};
+
+// visitedSet.add(john)
+// visitedSet.add(peter)
+// visitedSet.add(john)
+
+// alert(visitedSet.has(mary))
+
+// john = null; // the visited set fo john will be clean automatically
+// alert(visitedSet.has(john))
+
+// weakmap is a map like collection that allows only object as keys and removes them together
+// with associated value, once they become in-accessible by other means
+
+// weakset is a set like collection that stores only object and remove once they become inaccessible by 
+// other means, their main advantage is that they have weak reference to object and they can be easily 
+// removed by the garbage collector.
+
+// weakmap and weakset are used as a seconday data structure in addition to the primary object
+
+// Object.keys, values,entries - they are used to get the key, values, and key value pair of an object array
+// let user = {
+//     name: 'john',
+//     age: 30
+// }
+
+// for(let value of Object.values(user)){
+//     alert(value)
+// }
+
+let prices = {
+    banana: 1,
+    orange: 2,
+    meat: 4
+}
+
+let doubleprice = Object.fromEntries(
+    Object.entries(prices).map(entry => [entry[0], entry[1] * 2])
+)
+alert(doubleprice.meat)
